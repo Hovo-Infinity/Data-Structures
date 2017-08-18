@@ -35,7 +35,7 @@ class Queue<T> {
         return count;
     }
     
-    public func push(item:T) {
+    public func push(_ item:T) {
         let newItem = node.init(info: item);
         if count() == 0 {
             back?.next = newItem;

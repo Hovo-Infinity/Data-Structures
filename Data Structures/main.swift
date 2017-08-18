@@ -8,19 +8,28 @@
 
 import Foundation
 
-var q = Queue<Int>();
-q.log();
-q.push(item: 5);
-q.push(item: 8);
-q.push(item: 12);
-q.push(item: 2);
-q.log();
+var s = Stack<Int>();
+
+s.push(5);
+s.push(6);
+s.push(12);
+s.push(26);
+print(s.top());
 do {
-    try q.pop()
+ try s.pop();
 } catch {
     print(error.localizedDescription);
 }
-q.log();
+print(s.top());
+try? s.pop();
+try? s.pop();
+print(s.top());
+try? s.pop();
+do {
+    try s.pop();
+} catch {
+    print(error.localizedDescription);
+}
 
 print("Hello, World!")
 
